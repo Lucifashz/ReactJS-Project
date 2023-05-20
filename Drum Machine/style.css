@@ -1,0 +1,200 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3C486B;
+  color: #fff
+}
+
+#display {
+  display: none;
+  font-size: 24px;
+  animation: fade-in .3s ease-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 24px;
+  margin-top: 8px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ca2222;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background: #fff;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.slider:after {
+  content: "OFF";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 9px;
+  font-family: Verdana, sans-serif;
+}
+
+input:checked+.slider:after {
+  content: "ON";
+}
+
+input:checked+.slider {
+  background: #2ab934;
+}
+
+input:checked+.slider:before {
+  transform: translateX(31px);
+}
+
+.slider-volume:hover {
+  cursor: grab;
+}
+
+.slider-volume:active {
+  cursor: grabbing;
+}
+
+#drum-machine {
+  border-radius: 18px;
+  background: #ABF2FB;
+}
+
+#drum-machine .display-sound {
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+#drum-machine .display-sound .text {
+  text-align: center;
+  padding: 15px;
+  width: 400px;
+  border-radius: 7px;
+  background: #7868FF;
+  height: 59px;
+  box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.25),
+    inset -4px -6px 9px rgba(0, 0, 0, 0.25),
+    inset 4px 6px 5px rgba(255, 255, 255, 0.25);
+}
+
+#drum-machine .wrapper {
+  display: flex;
+}
+
+#drum-machine .wrapper .pad-bank {
+  display: grid;
+  grid-gap: 30px 20px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 25px;
+  border-right: 1px solid #000;
+}
+
+#drum-machine .wrapper .pad-bank .drum-pad {
+  background: #7868FF;
+  color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  transition: .2s;
+  box-shadow: inset 2px 2px 1px rgba(255, 255, 255, 0.25),
+    inset -2px -2px 1px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#drum-machine .wrapper .controls .power-audio {
+  display: flex;
+  column-gap: 120px;
+}
+
+#drum-machine .wrapper .controls .power-audio .power {
+  width: 91px;
+}
+
+#drum-machine .wrapper .controls .power-audio .audio .input-volume {
+  display: flex;
+  column-gap: 15px;
+  margin-top: 10px;
+}
+
+
+#drum-machine .wrapper .controls {
+  width: 412px;
+  background: #7868FF;
+  margin: 25px;
+  padding: 15px;
+  border-radius: 10px;
+  transition: .2s;
+  box-shadow: inset 2px 2px 1px rgba(255, 255, 255, 0.25),
+    inset -2px -2px 1px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#drum-machine .wrapper .controls .mode {
+  margin-top: 33px;
+}
+
+#drum-machine .wrapper .controls .mode .text-mode {
+  height: 41px;
+}
+
+#drum-machine .wrapper .controls .mode .text-mode .animation {
+  font-size: 20px;
+  animation: fade-in .7s ease-in;
+}
+
+#drum-machine .wrapper .controls .drum-controle {
+  display: grid;
+  grid-gap: 10px 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#drum-machine .wrapper .controls .drum-controle button {
+  padding: 15px 3px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.25));
+}

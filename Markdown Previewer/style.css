@@ -1,0 +1,149 @@
+* {
+  font-family: 'Apercu', sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  background: #1f313f;
+}
+
+#container {
+  height: 100vh;
+}
+
+#header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header h1 {
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -8px -10px 8px -8px #fff, 8px 10px 13px -8px black;
+}
+
+#wrapper {
+  background-color: #2B2E4A;
+  height: 85vh;
+  display: flex;
+}
+
+#c-wrapper {
+  flex: 1 1 calc(40vw - 5vw);
+  height: 90vh;
+  position: relative;
+}
+
+.c-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+}
+
+.c-header-ta-none {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.c-header .header-c {
+  font-weight: 800;
+  margin-top: 35px;
+  width: 80%;
+  padding: 15px;
+  border-right: 2px solid;
+  border-left: 2px solid;
+  border-top: 2px solid;
+  border-bottom: 0;
+  border-image: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%)1;
+}
+
+#editor {
+  width: 80%;
+  height: 70vh;
+  outline: none;
+  resize: none;
+  border: none;
+  padding: 15px;
+  border: 2px solid;
+  border-image: linear-gradient(98deg, #ff7a18, #af002d 41.07%, #319197 76.05%)1;
+}
+
+#preview {
+  overflow: auto;
+  width: 80%;
+  height: 70vh;
+  padding: 15px;
+  border: 2px solid;
+  border-image: linear-gradient(98deg, #ff7a18, #af002d 41.07%, #319197 76.05%)1;
+}
+
+#resizer {
+  width: 1%;
+  height: 90vh;
+  background: black;
+  cursor: col-resize;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+ul,
+ol {
+  padding-left: 2em;
+}
+
+li {
+  margin-top: 0.25em;
+}
+
+#previewer hr {
+  border: none;
+  border-bottom: 1px solid #d5d5d3;
+  margin: 1.5em auto;
+}
+
+#previewer pre {
+  padding: 16px;
+  margin-bottom: 1.5em;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 0.5rem;
+  word-wrap: normal;
+  border-left: 0.25em solid #fdd24e;
+}
+
+
+#previewer blockquote code {
+  color: #2B2E4A;
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #fdd24e;
+  border-radius: 3px;
+}
+
+#previewer pre code {
+  color: #2B2E4A;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  line-height: 1.5;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+  display: inline;
+  max-width: auto;
+  overflow: visible;
+}

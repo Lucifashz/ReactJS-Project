@@ -1,0 +1,237 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css);
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(65, 65, 160);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+#wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  box-shadow: 15px 30px 20px -10px rgba(0, 0, 0, 0.4), inset -20px -40px 40px 30px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+  position: absolute;
+  transform: translate(-360px, -300px);
+}
+
+.container2 {
+  position: absolute;
+  transform: translate(255px, 150px);
+}
+
+#wrapper .fa-quote-left {
+  position: absolute;
+  font-size: 140px;
+}
+
+#wrapper .fa-quote-right {
+  position: absolute;
+  font-size: 140px;
+}
+
+#quote-box {
+  width: 600px;
+  height: 600px;
+  background-color: white;
+  padding: 50px 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12), 0 40px 15px -15px rgba(0, 0, 0, 0.2), inset 0 -50px 20px -20px rgba(0, 0, 0, 0.2);
+
+}
+
+.quote-text,
+.header-text {
+  text-align: center;
+}
+
+.header-text {
+  color: black;
+  font-family: 'Noticia Text', serif;
+  flex-grow: .5;
+}
+
+#h-text {
+  font-size: 90px;
+  font-weight: 700;
+}
+
+.quote-text {
+  margin-bottom: 1em;
+  font-weight: 500;
+  font-size: 1.75em;
+  flex-grow: 0;
+}
+
+#text {
+  transition: 1s;
+}
+
+.quote-author {
+  text-align: right;
+  flex-grow: 0;
+}
+
+#author {
+  transition: 1s;
+  margin-bottom: 1em;
+  font-size: 1em;
+}
+
+.quote-author #author::before {
+  font: var(--fa-font-solid);
+  content: "\f068";
+  margin-right: 8px;
+}
+
+.buttons {
+  margin-top: 20px;
+  flex-grow: 1;
+  border: none;
+}
+
+.buttons ul {
+  display: flex;
+}
+
+.buttons ul li {
+  margin: 0 5px;
+  display: flex;
+  font-size: 20px;
+}
+
+.buttons ul li button:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+
+.buttons ul .item-1 a,
+.buttons ul .item-2 a,
+.buttons ul .item-3 a {
+  box-shadow:
+    6px 6.3px 1.3px rgba(0, 0, 0, 0.04),
+    10.6px 11px 3.2px rgba(0, 0, 0, 0.053),
+    14.5px 15.1px 6.3px rgba(0, 0, 0, 0.066),
+    20.3px 21.1px 11.8px rgba(0, 0, 0, 0.08),
+    36.4px 37.9px 24px rgba(0, 0, 0, 0.094),
+    96px 100px 80px rgba(0, 0, 0, 0.11);
+}
+
+.buttons ul .item-1 a:hover,
+.buttons ul .item-2 a:hover,
+.buttons ul .item-3 a:hover {
+  border-radius: 50%;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+
+
+.buttons ul .item-4 {
+  flex-grow: 1;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+.buttons .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: rgb(65, 65, 160);
+  color: rgb(65, 65, 160);
+  font-size: 23px;
+}
+
+.container span::before {
+  font: var(--fa-font-solid);
+  content: "\f10d";
+}
+
+
+.container2 span::before {
+  font: var(--fa-font-solid);
+  content: "\f10e";
+}
+
+.buttons .item-1 .button i::before {
+  font: var(--fa-font-solid);
+  content: "\f028";
+}
+
+.buttons .item-2 .button i::before {
+  font: var(--fa-font-solid);
+  content: "\f0c5";
+}
+
+.buttons .item-3 .button i::before {
+  font: var(--fa-font-brands);
+  content: "\f099";
+}
+
+.buttons .click {
+  padding: 13px 22px;
+  float: right;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(65, 65, 160);
+  ;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow:
+    6px 6.3px 1.3px rgba(0, 0, 0, 0.04),
+    10.6px 11px 3.2px rgba(0, 0, 0, 0.053),
+    14.5px 15.1px 6.3px rgba(0, 0, 0, 0.066),
+    20.3px 21.1px 11.8px rgba(0, 0, 0, 0.08),
+    36.4px 37.9px 24px rgba(0, 0, 0, 0.094),
+    96px 100px 80px rgba(0, 0, 0, 0.11);
+}
+
+#footer {
+  display: block;
+  text-align: center;
+}

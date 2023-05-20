@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #413543;
+}
+
+.output {
+  text-align: right;
+  color: #fff;
+  background: #413543;
+  margin: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 7px 3px 1px 1px rgba(0, 0, 0, 0.3);
+  min-height: 78px;
+}
+
+.output .result {
+  font-size: 2rem;
+  color: white;
+  overflow-wrap: break-word;
+}
+
+.output .input {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+  overflow-wrap: break-word;
+}
+
+.calculator {
+  padding: 5px;
+  background: #fff;
+  width: 280px;
+  position: relative;
+  border-radius: 15px;
+}
+
+button {
+  position: relative;
+  border-radius: 50px;
+  margin: 0 0 15px 15px;
+  height: 50px;
+  width: 50px;
+  color: #FE6244;
+  border: none;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover,
+#clear:hover {
+  box-shadow: inset 9px 9px 12px -3px rgba(0, 0, 0, 0.3);
+}
+
+#clear {
+  background: #FC2947;
+  color: #fff;
+  box-shadow: 4px 5px 4px -1px rgba(0, 0, 0, 0.25);
+}
+
+#delete {
+  color: #FC2947;
+}
+
+#zero {
+  width: 115px;
+}
+
+#equals {
+  background: #FE6244;
+  color: #fff;
+  height: 120px;
+  bottom: 2px;
+  position: absolute;
+}
